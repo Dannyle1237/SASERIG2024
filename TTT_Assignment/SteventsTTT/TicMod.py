@@ -56,14 +56,14 @@ while playing:
             
             #Check horizontal lines (0,1,2)(3,4,5)(6,7,8) <- forloopable
             for num in [0,3,6]:
-                if turn == spots[num] and turn == spots[num+1] and turn == spots[num+2]:
+                if turn == spots[num] == spots[num+1] == spots[num+2]:
                 #Better way if spots[num:num+3] == [turn,turn,turn]:
                     print(f"Winner is Player {turn}")
                     playing = False
             
             #Check vertical lines (0,3,6)(1,4,7)(2,5,8)
             for num in range(3): #list [0,1,2]
-                if turn == spots[num] and turn == spots[num+3] and turn == spots[num+6]:
+                if turn == spots[num] == spots[num+3] == spots[num+6]:
                     print(f"Winner is {turn}")
                     playing = False
 
@@ -71,7 +71,7 @@ while playing:
             #middle (spot 4) is required 
             if turn == spots[4]:
                 #check corners
-                if (turn == spots[0] and turn == spots[8]) or (turn == spots[2] and turn == spots[6]):
+                if (turn == spots[0] == spots[8]) or (turn == spots[2] == spots[6]):
                     print(f"Winner is {turn}")
                     playing = False
 
