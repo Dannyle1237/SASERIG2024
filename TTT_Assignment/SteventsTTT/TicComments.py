@@ -1,16 +1,16 @@
 #Initalize Board
-spots = {1: '1', 2: '2',3: '3', 4:'4',5: '5',6:'6',7:'7',8:'8',9:'9'}
+spots = {1: '1', 2: '2',3: '3', 4:'4',5: '5',6:'6',7:'7',8:'8',9:'9'}        
 
 #Function to print board 
 def draw_board(spots):
-    board = (f"|{spots[1]}|{spots[2]}|{spots[3]}|\n"f"|{spots[4]}|{spots[5]}|{spots[6]}|\n"f"|{spots[7]}|{spots[8]}|{spots[9]}|\n")
+    board = (f"|{spots[1]}|{spots[2]}|{spots[3]}|\n|{spots[4]}|{spots[5]}|{spots[6]}|\n|{spots[7]}|{spots[8]}|{spots[9]}|\n")
     print (board)
 
 #Highly rec moving runtime code to bottom below variables and functions
 draw_board(spots)
 
 #Variables (game status and player turn (0=X,1=O))
-playing =  True
+playing = True
 turn = 0
 
 #Ingame while loop
@@ -141,7 +141,7 @@ while playing:
         case default:
             print("Please Enter 1-9")
             draw_board(spots)
-    
+
     #Check for winners
     if spots[1] =="X" and spots[2] == "X" and spots[3] == "X":
         print("X wins")

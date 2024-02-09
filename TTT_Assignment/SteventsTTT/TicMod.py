@@ -3,7 +3,7 @@
 #Before: 
 #spots = {1: '1', 2: '2',3: '3', 4:'4',5: '5',6:'6',7:'7',8:'8',9:'9'}
 #After:
-spots = list(range(10)) # range(10) returns immutable list [0,1,2,3,4,5,6,7,8,9]. We cast to list() to make it mutable
+spots = list(range(9)) # range(9) returns immutable list [0,1,2,3,4,5,6,7,8]. We cast to list() to make it mutable
 
 #Function to print board 
 def draw_board(spots):
@@ -52,7 +52,7 @@ while playing:
         if spots[choice] == choice: #check if spot is not taken
             spots[choice] = turn #If spot is available, change to variable turn (X or O) 
             #Now we check for winner
-            #Winner is determined if spots from current turn create a horizontal/vertical line or diagonal
+            #Winner is determined if spots from current turn create a horizontal/verxtical line or diagonal
             
             #Check horizontal lines (0,1,2)(3,4,5)(6,7,8) <- forloopable
             for num in [0,3,6]:
